@@ -138,7 +138,7 @@ O2WBkBTW7CKWUZLqm263PklCL5m7K0GU
 
 Ansible has recently introduced [Execution Environment](https://docs.ansible.com/automation-controller/latest/html/userguide/execution_environments.html) which is basically a container to execute your playbooks. The main interest is you don't have to build a virtual environment in AWX.
 
-To build such container, you need docker or podman as well as [`ansible-builder`](https://www.ansible.com/blog/introduction-to-ansible-builder).
+To build such container, you need __docker__ or __podman__ as well as [`ansible-builder`](https://www.ansible.com/blog/introduction-to-ansible-builder).
 
 ```bash
 pip install ansible-builder
