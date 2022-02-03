@@ -171,7 +171,7 @@ additional_build_steps:
         sshpass
 ```
 
-> Note that collection definition is part of [requirements.yml](./requirements.yml). So a new image should be build each time you want to upgrade to a new avd or cvp collection.
+> Note that collection definition is part of requirements.yml. So a new image should be build each time you want to upgrade to a new avd or cvp collection.
 
 To build image, nothing complex:
 
@@ -179,7 +179,7 @@ To build image, nothing complex:
 ansible-builder -f exeution-environment.yml -t <your-docker-image:tag>
 ```
 
-Ansible version for runner can be found in [ansible-runner registry](quay.io/ansible/ansible-runner)
+Ansible version for runner can be found in [ansible-runner registry](https://quay.io/ansible/ansible-runner)
 
 Also upload image to a registry.
 
@@ -261,7 +261,3 @@ Now everything is set and you should be able to run your playbook or build your 
 - [AWX Operator repository](https://github.com/ansible/awx-operator)
 - [Minikube](https://minikube.sigs.k8s.io/docs/)
 - [Ansible builder](https://www.ansible.com/blog/introduction-to-ansible-builder)
-
-## License
-
-Project is published under [Apache License](LICENSE).
