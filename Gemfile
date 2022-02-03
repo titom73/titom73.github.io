@@ -24,3 +24,4 @@ gem "webrick", "~> 1.7"
 # Website theme:
 #h ttps://chirpy.cotes.page/posts/getting-started/#option-1-using-the-chirpy-starter
 gem "jekyll-theme-chirpy", "~> 5.0", ">= 5.0.2"
+gem 'jekyll-compose'
