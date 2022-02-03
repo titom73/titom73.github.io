@@ -171,7 +171,7 @@ additional_build_steps:
         sshpass
 ```
 
-> Note that collection definition is part of requirements.yml. So a new image should be build each time you want to upgrade to a new avd or cvp collection.
+> Note that collection definition is part of [requirements.yml](./requirements.yml). So a new image should be build each time you want to upgrade to a new avd or cvp collection.
 
 To build image, nothing complex:
 
