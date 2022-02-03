@@ -1,0 +1,21 @@
+"type: post":
+  - _posts/**/*
+  - _posts/*
+
+"type: page":
+  - _tabs/**/*
+  - _tabs/*
+
+"type: code quality":
+  - .github/labeler.yml
+  - .github/*
+  - .github/**/*
+
+"type: dependencies":
+  - Gemfile
+
+"type: configuration":
+  - _config.yaml
+
+"type: repo":
+- '*'
