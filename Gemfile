@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gemspec
+# gemspec
 
 group :test do
   gem "html-proofer", "~> 3.18"
@@ -20,3 +20,7 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
 gem "webrick", "~> 1.7"
+
+# Website theme:
+#h ttps://chirpy.cotes.page/posts/getting-started/#option-1-using-the-chirpy-starter
+gem "jekyll-theme-chirpy", "~> 5.0", ">= 5.0.2"
