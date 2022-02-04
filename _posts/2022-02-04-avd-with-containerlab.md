@@ -2,6 +2,8 @@
 layout: post
 title: Build Containerlab topology from AVD
 date: 2022-02-04 15:09 +0100
+categories: [Automation]
+tags: [ansible, devops, containerlab, arista]
 ---
 
 ## Overview
