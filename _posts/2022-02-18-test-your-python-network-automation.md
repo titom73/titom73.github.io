@@ -43,7 +43,7 @@ def get_cvp_client(cvp_database:  MockCVPDatabase) -> MagicMock:
     return mock_client
 ```
 
-As you can see in the [`side_effects`](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.side_effect) definition, we use cvprac method name as it is automatically populated from the [`create_autospec`](https://docs.python.org/3/library/unittest.mock.html#create-autospec). In our case, we have an object named `cvp_database` where we have all the cvprac method we use. Main reason is this object can instantiate a fake database with user's defined JSON object.
+As you can see in the [`side_effects`](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.side_effect) definition, we use cvprac method name as it is automatically populated from the [`create_autospec`](https://docs.python.org/3/library/unittest.mock.html#create-autospec). In our case, we have an object named `cvp_database` where we have all the cvprac method we use. Main reason is this object can instantiate a fake database with user's defined JSON object. [Auospeccing](https://docs.python.org/3/library/unittest.mock.html#autospeccing) also add security guard to recursively speccing attributes and avoid silent error that could break CI.
 
 ```python
 class MockCVPDatabase:
@@ -140,6 +140,8 @@ def cvp_database():
     LOGGER.debug('Final CVP state: %s', database)
 ```
 
+This approach is based on a generic content available for all cases. But another approach can be to leverage indirect parametrisation to inject data specific to each test. We won't go through each approach here since both presents pro and cons. But if you want to read more, you can refer to [this page](https://docs.pytest.org/en/6.2.x/example/parametrize.html#indirect-parametrization).
+
 Another fixture is used to instantiate `arista.cvp` utils and is based on the same approach:
 
 ```python
@@ -151,6 +153,8 @@ def fact_unit_tools(request, cvp_database):
     yield instance
     LOGGER.debug('Mock calls: %s', pprint.pformat(cvp_client.mock_calls))
 ```
+
+As you can see in example above, we log state when we instantiate and release data in fixture. So we can see changes in Cloudvision database and inspect result of tests anytime. Also, `yield` is header of code runs when we release code after test execution.
 
 ### Parametrize tests
 
